@@ -41,10 +41,10 @@ export default function About() {
 
               <div className="space-y-4 text-base text-zinc-700 leading-relaxed font-normal">
                 <p>
-                  I am proficient in the <strong className="text-zinc-950">MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>, JavaScript, Python, C++, HTML5, and CSS3. My focus is on building robust full-stack applications from scratch, solving real-world challenges, and writing clean, maintainable code.
+                  I am proficient in the <strong className="text-zinc-950">MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>, JavaScript, Python, C++, HTML5, and CSS3, with a focus on integrating practical AI capabilities into modern web applications.
                 </p>
                 <p>
-                  I am actively seeking an <strong className="text-[#FF0033]">internship opportunity</strong> to apply my technical skills, gain real-world industry experience, and contribute effectively to meaningful digital projects.
+                  I am actively seeking <strong className="text-[#FF0033]">Full-Stack Developer and AI-enabled Software Developer opportunities</strong> to apply my technical skills, architect scalable web software, and engineer reliable digital products.
                 </p>
               </div>
 
@@ -52,9 +52,9 @@ export default function About() {
               <div className="mt-8 pt-6 border-t border-zinc-200 flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <CheckCircle className="w-5 h-5 text-[#FF0033]" />
-                  <span className="text-xs font-mono font-bold text-zinc-900 uppercase">AUTHENTIC STUDENT PROFILE</span>
+                  <span className="text-xs font-mono font-bold text-zinc-900 uppercase font-sans">FULL-STACK & AI DEVELOPER</span>
                 </div>
-                <span className="text-xs font-mono text-zinc-500">MERN STACK ENTHUSIAST</span>
+                <span className="text-xs font-mono text-zinc-500">MERN + AI INTEGRATIONS</span>
               </div>
             </motion.div>
 

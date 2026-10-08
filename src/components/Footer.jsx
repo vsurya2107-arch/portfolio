@@ -16,7 +16,7 @@ export default function Footer() {
           <span className="text-xl font-extrabold tracking-tight text-zinc-950">V. SURYA</span>
           <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
           <span className="text-xs font-mono text-zinc-600">
-            B.Tech IT • MERN Stack Developer
+            Full-Stack Developer • AI Integration
           </span>
         </div>
 

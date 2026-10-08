@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Code2, Database, Layers, Terminal, Wrench, CheckCircle2 } from 'lucide-react';
+import { Code2, Database, Layers, Terminal, Wrench, CheckCircle2, Server, Bot, Cpu } from 'lucide-react';
 import { skillsData } from '../data/portfolioData';
 
 export default function Skills() {
   const [activeCategory, setActiveCategory] = useState("all");
 
   const categoryIcons = {
-    mern: Layers,
-    programming: Code2,
-    web: Terminal,
+    frontend: Code2,
+    backend: Server,
     database: Database,
-    tools: Wrench
+    tools: Wrench,
+    ai: Bot
   };
 
   return (

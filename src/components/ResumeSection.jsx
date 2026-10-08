@@ -73,7 +73,7 @@ export default function ResumeSection() {
                 </span>
                 <span className="bg-white text-zinc-800 px-3 py-1.5 rounded-lg border border-zinc-200 flex items-center space-x-1.5 shadow-2xs">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033]" />
-                  <span>MERN Stack Specialist</span>
+                  <span>Full-Stack & AI Developer</span>
                 </span>
                 <span className="bg-white text-zinc-800 px-3 py-1.5 rounded-lg border border-zinc-200 flex items-center space-x-1.5 shadow-2xs">
                   <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033]" />
