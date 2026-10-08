@@ -17,21 +17,21 @@ export default function FeaturedProjects() {
         {/* Section Header */}
         <div className="flex items-center space-x-3 mb-4">
           <span className="w-8 h-[2px] bg-[#FF0033]" />
-          <span className="text-xs font-mono font-bold tracking-widest text-[#FF0033] uppercase">
+          <span className="text-xs font-sans font-bold tracking-widest text-[#FF0033] uppercase">
             03 // FEATURED PROJECTS & TECHNICAL PROOF
           </span>
         </div>
 
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-zinc-950">
+            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-zinc-950 font-sans">
               SELECTED <span className="text-[#FF0033]">WORK</span>
             </h2>
-            <p className="text-zinc-600 font-mono text-xs sm:text-sm mt-2 max-w-2xl">
+            <p className="text-zinc-600 font-sans text-sm sm:text-base leading-relaxed mt-2 max-w-2xl font-normal">
               Authentic software projects showcasing full-stack development, database architecture, and practical AI integrations.
             </p>
           </div>
-          <span className="text-xs font-mono text-zinc-500 bg-zinc-100 px-3 py-1.5 rounded-full border border-zinc-200 font-bold">
+          <span className="text-xs font-sans font-bold text-zinc-600 bg-zinc-100 px-3 py-1.5 rounded-full border border-zinc-200">
             5 FEATURED APPLICATIONS
           </span>
         </div>
@@ -61,39 +61,39 @@ export default function FeaturedProjects() {
                     
                     {/* Number & Category Pill */}
                     <div className="flex items-center justify-between">
-                      <span className="text-4xl font-black font-mono text-zinc-200 hover:text-[#FF0033] transition-colors">
+                      <span className="text-3xl sm:text-4xl font-black font-sans text-zinc-200 hover:text-[#FF0033] transition-colors">
                         {project.number}
                       </span>
-                      <span className="text-xs font-mono font-bold bg-zinc-100 text-zinc-700 px-3 py-1 rounded-full border border-zinc-200">
+                      <span className="text-xs font-sans font-semibold bg-zinc-100 text-zinc-700 px-3 py-1 rounded-full border border-zinc-200">
                         {project.category}
                       </span>
                     </div>
 
                     {/* Title & Subtitle */}
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-black text-zinc-950 tracking-tight uppercase leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-bold font-sans text-zinc-950 tracking-tight uppercase leading-tight">
                         {project.title}
                       </h3>
-                      <p className="text-xs sm:text-sm font-mono font-bold text-[#FF0033] mt-0.5">
+                      <p className="text-sm sm:text-base font-sans font-semibold text-[#FF0033] mt-1">
                         {project.subtitle}
                       </p>
                     </div>
 
                     {/* Short Description */}
-                    <p className="text-xs text-zinc-600 leading-relaxed font-normal whitespace-pre-line">
+                    <p className="text-sm sm:text-[15px] font-sans text-zinc-700 leading-relaxed font-normal whitespace-pre-line max-w-xl">
                       {project.description}
                     </p>
 
                     {/* Key Features */}
                     {project.keyFeatures && project.keyFeatures.length > 0 && (
                       <div>
-                        <span className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-wider block mb-2">
+                        <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
                           KEY FEATURES
                         </span>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {project.keyFeatures.map((feat, idx) => (
-                            <div key={idx} className="flex items-start space-x-2 text-xs font-mono text-zinc-800">
-                              <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033] shrink-0 mt-0.5" />
+                            <div key={idx} className="flex items-start space-x-2 text-xs sm:text-sm font-sans font-medium text-zinc-800 leading-snug">
+                              <CheckCircle2 className="w-4 h-4 text-[#FF0033] shrink-0 mt-0.5" />
                               <span>{feat}</span>
                             </div>
                           ))}
@@ -101,16 +101,32 @@ export default function FeaturedProjects() {
                       </div>
                     )}
 
+                    {/* Engineering Highlights */}
+                    {project.engineeringHighlights && project.engineeringHighlights.length > 0 && (
+                      <div>
+                        <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
+                          ENGINEERING HIGHLIGHTS
+                        </span>
+                        <div className="flex flex-wrap gap-1.5 font-sans text-xs text-zinc-700 font-medium">
+                          {project.engineeringHighlights.map((hl, idx) => (
+                            <span key={idx} className="bg-zinc-50 border border-zinc-200 px-3 py-1 rounded-md text-zinc-700 font-semibold">
+                              {hl}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+                    )}
+
                     {/* Technologies */}
                     <div>
-                      <span className="text-[10px] font-mono font-bold text-zinc-400 uppercase tracking-wider block mb-2">
+                      <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
                         TECHNOLOGIES
                       </span>
                       <div className="flex flex-wrap gap-2">
                         {project.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="bg-zinc-100 text-zinc-900 px-3 py-1 rounded-full border border-zinc-200 text-xs font-mono font-bold"
+                            className="bg-zinc-100 text-zinc-900 px-3 py-1 rounded-full border border-zinc-200 text-xs font-sans font-semibold"
                           >
                             {tech}
                           </span>
@@ -118,37 +134,45 @@ export default function FeaturedProjects() {
                       </div>
                     </div>
 
-                    {/* Project Links (Rendered ONLY if genuine URL exists) */}
-                    {(project.github || project.live) && (
-                      <div className="pt-2 flex flex-wrap items-center gap-3">
-                        {project.github && (
-                          <a
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-cursor="GO"
-                            className="inline-flex items-center space-x-2 bg-zinc-950 text-white hover:bg-[#FF0033] px-5 py-2.5 rounded-full text-xs font-mono font-bold transition-all shadow-md"
-                          >
-                            <GithubIcon className="w-4 h-4" />
-                            <span>GITHUB REPOSITORY</span>
-                            <ArrowUpRight className="w-3.5 h-3.5" />
-                          </a>
-                        )}
+                    {/* Project Links (Shows working link if real URL exists; otherwise clean unavailable status) */}
+                    <div className="pt-2 flex flex-wrap items-center gap-3">
+                      {project.github ? (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-cursor="GO"
+                          className="inline-flex items-center space-x-2 bg-zinc-950 text-white hover:bg-[#FF0033] px-5 py-2.5 rounded-full text-xs font-sans font-bold transition-all shadow-md"
+                        >
+                          <GithubIcon className="w-4 h-4" />
+                          <span>GITHUB REPOSITORY</span>
+                          <ArrowUpRight className="w-3.5 h-3.5" />
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200 px-4 py-2 rounded-full text-xs font-sans font-semibold">
+                          <GithubIcon className="w-3.5 h-3.5 text-zinc-400" />
+                          <span>GitHub unavailable</span>
+                        </span>
+                      )}
 
-                        {project.live && (
-                          <a
-                            href={project.live}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            data-cursor="OPEN"
-                            className="inline-flex items-center space-x-2 bg-[#FF0033] text-white hover:bg-[#E0002D] px-5 py-2.5 rounded-full text-xs font-mono font-bold transition-all shadow-md shadow-[#FF0033]/20"
-                          >
-                            <ExternalLink className="w-4 h-4" />
-                            <span>LIVE DEMO</span>
-                          </a>
-                        )}
-                      </div>
-                    )}
+                      {project.live ? (
+                        <a
+                          href={project.live}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          data-cursor="OPEN"
+                          className="inline-flex items-center space-x-2 bg-[#FF0033] text-white hover:bg-[#E0002D] px-5 py-2.5 rounded-full text-xs font-sans font-bold transition-all shadow-md shadow-[#FF0033]/20"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          <span>LIVE DEMO</span>
+                        </a>
+                      ) : (
+                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200 px-4 py-2 rounded-full text-xs font-sans font-semibold">
+                          <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
+                          <span>Demo unavailable</span>
+                        </span>
+                      )}
+                    </div>
 
                   </div>
                 </div>

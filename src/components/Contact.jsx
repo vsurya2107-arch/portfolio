@@ -64,7 +64,7 @@ export default function Contact() {
         setStatus('error');
         setErrorMessage(data.error || 'Unable to send your message. Please try again.');
       }
-    } catch (err) {
+    } catch {
       setStatus('error');
       setErrorMessage('Unable to send your message. Please try again.');
     }
@@ -109,9 +109,14 @@ export default function Contact() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="lg:col-span-6 space-y-6"
           >
-            <p className="text-lg text-zinc-600 font-normal leading-relaxed">
-              I am actively seeking internship opportunities, freelance web development projects, and software collaborations. Feel free to reach out directly through any channel below.
-            </p>
+            <div className="space-y-3">
+              <p className="text-lg text-zinc-900 font-bold leading-relaxed">
+                Actively seeking Full-Stack Developer and AI-enabled Software Developer opportunities.
+              </p>
+              <p className="text-xs font-mono text-zinc-500 font-bold bg-zinc-100 px-3 py-1.5 rounded-lg border border-zinc-200 inline-block">
+                📍 {personalData.contact.location}
+              </p>
+            </div>
 
             {/* Email Card */}
             <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-200 hover:border-[#FF0033] transition-colors flex items-center justify-between group shadow-2xs">

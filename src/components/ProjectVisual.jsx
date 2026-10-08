@@ -46,23 +46,23 @@ export default function ProjectVisual({ project }) {
       <div className="absolute -top-10 -right-10 w-64 h-64 bg-[#FF0033]/10 rounded-full blur-3xl group-hover:bg-[#FF0033]/20 transition-all duration-700" />
 
       {/* Top Application Header Bar Mockup */}
-      <div className="relative z-10 flex items-center justify-between pb-3 border-b border-zinc-800">
+      <div className="relative z-10 flex items-center justify-between pb-3 border-b border-zinc-800 font-sans">
         <div className="flex items-center space-x-2">
           <span className="w-3 h-3 rounded-full bg-[#FF0033]" />
           <span className="w-3 h-3 rounded-full bg-zinc-700" />
           <span className="w-3 h-3 rounded-full bg-zinc-800" />
-          <span className="text-[11px] font-mono font-bold text-zinc-400 ml-2 tracking-wider">
+          <span className="text-[11px] font-sans font-bold text-zinc-400 ml-2 tracking-wider">
             {category || "MERN STACK APP"}
           </span>
         </div>
-        <div className="flex items-center space-x-2 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800 text-[10px] font-mono text-zinc-300">
+        <div className="flex items-center space-x-2 bg-zinc-900 px-3 py-1 rounded-full border border-zinc-800 text-[10px] font-sans font-semibold text-zinc-300">
           <Activity className="w-3 h-3 text-[#FF0033] animate-pulse" />
           <span>LIVE PLATFORM PREVIEW</span>
         </div>
       </div>
 
       {/* Center Dynamic Visual Mockup Content */}
-      <div className="relative z-10 my-auto py-4">
+      <div className="relative z-10 my-auto py-4 font-sans">
         {visualType === "construction" && (
           <div className="space-y-4">
             <div className="flex items-center justify-between bg-zinc-900/90 p-3 rounded-xl border border-zinc-800">
@@ -71,26 +71,26 @@ export default function ProjectVisual({ project }) {
                   <Building2 className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-400">HOMIQ ENGINE</p>
+                  <p className="text-xs font-sans font-bold text-zinc-400">HOMIQ ENGINE</p>
                   <p className="text-sm font-bold text-white">Homeowner & Engineer Digital Portal</p>
                 </div>
               </div>
-              <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded border border-emerald-500/30">
+              <span className="text-[10px] font-sans font-bold bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded border border-emerald-500/30">
                 CONNECTED
               </span>
             </div>
 
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800/80">
-                <p className="text-[10px] font-mono text-zinc-500">PROJECT STAGE</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">PROJECT STAGE</p>
                 <p className="text-xs font-bold text-white mt-1">Foundation Plan</p>
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800/80">
-                <p className="text-[10px] font-mono text-zinc-500">CIVIL ENGINEER</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">CIVIL ENGINEER</p>
                 <p className="text-xs font-bold text-white mt-1">Verified Match</p>
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800/80">
-                <p className="text-[10px] font-mono text-zinc-500">STATUS</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">STATUS</p>
                 <p className="text-xs font-bold text-[#FF0033] mt-1">Active Build</p>
               </div>
             </div>
@@ -105,11 +105,11 @@ export default function ProjectVisual({ project }) {
                   <Sprout className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-400">PASUMAI DIAGNOSTICS</p>
+                  <p className="text-xs font-sans font-bold text-zinc-400">PASUMAI DIAGNOSTICS</p>
                   <p className="text-sm font-bold text-white">Crop Health & Disease AI Detector</p>
                 </div>
               </div>
-              <span className="text-[10px] font-mono bg-[#FF0033]/20 text-[#FF0033] px-2 py-1 rounded border border-[#FF0033]/30">
+              <span className="text-[10px] font-sans font-bold bg-[#FF0033]/20 text-[#FF0033] px-2 py-1 rounded border border-[#FF0033]/30">
                 AI SCANNER
               </span>
             </div>
@@ -121,10 +121,10 @@ export default function ProjectVisual({ project }) {
                 </div>
                 <div>
                   <p className="text-xs font-bold text-white">Early Disease Detection & Treatment</p>
-                  <p className="text-[10px] font-mono text-zinc-400">Pest control advisories for farmers</p>
+                  <p className="text-[10px] font-sans font-medium text-zinc-400">Pest control advisories for farmers</p>
                 </div>
               </div>
-              <span className="text-xs font-mono font-bold text-emerald-400">OPTIMAL</span>
+              <span className="text-xs font-sans font-bold text-emerald-400">OPTIMAL</span>
             </div>
           </div>
         )}
@@ -137,22 +137,22 @@ export default function ProjectVisual({ project }) {
                   <ShieldAlert className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-400">MULE ACCOUNT ENGINE</p>
+                  <p className="text-xs font-sans font-bold text-zinc-400">MULE ACCOUNT ENGINE</p>
                   <p className="text-sm font-bold text-white">Fraud Prevention & Behavioral Rule Guard</p>
                 </div>
               </div>
-              <span className="text-[10px] font-mono bg-[#FF0033] text-white px-2 py-1 rounded font-bold shadow-[0_0_10px_#FF0033]">
+              <span className="text-[10px] font-sans bg-[#FF0033] text-white px-2 py-1 rounded font-bold shadow-[0_0_10px_#FF0033]">
                 PROTECTED
               </span>
             </div>
 
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800">
-                <p className="text-[10px] font-mono text-zinc-500">BEHAVIORAL PATTERN</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">BEHAVIORAL PATTERN</p>
                 <p className="text-xs font-bold text-white mt-1">Rule Engine Monitoring</p>
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800">
-                <p className="text-[10px] font-mono text-zinc-500">RISK DETECTION</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">RISK DETECTION</p>
                 <p className="text-xs font-bold text-[#FF0033] mt-1">Multi-Account Lock</p>
               </div>
             </div>
@@ -167,11 +167,11 @@ export default function ProjectVisual({ project }) {
                   <Bot className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-400">REAL-TIME TRANSLATOR</p>
+                  <p className="text-xs font-sans font-bold text-zinc-400">REAL-TIME TRANSLATOR</p>
                   <p className="text-sm font-bold text-white">AI Sign Language Gesture Engine</p>
                 </div>
               </div>
-              <span className="text-[10px] font-mono bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30">
+              <span className="text-[10px] font-sans font-bold bg-blue-500/20 text-blue-400 px-2 py-1 rounded border border-blue-500/30">
                 VISION ML
               </span>
             </div>
@@ -179,9 +179,9 @@ export default function ProjectVisual({ project }) {
             <div className="p-3 bg-zinc-900/60 rounded-xl border border-zinc-800 flex items-center justify-between">
               <div className="flex items-center space-x-2">
                 <Cpu className="w-4 h-4 text-[#FF0033]" />
-                <span className="text-xs font-mono text-zinc-300">Gesture Stream to Speech Output</span>
+                <span className="text-xs font-sans text-zinc-300">Gesture Stream to Speech Output</span>
               </div>
-              <span className="text-xs font-mono text-white font-bold">READY</span>
+              <span className="text-xs font-sans text-white font-bold">READY</span>
             </div>
           </div>
         )}
@@ -194,22 +194,22 @@ export default function ProjectVisual({ project }) {
                   <ShoppingBag className="w-6 h-6" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono text-zinc-400">FULL-STACK STORE</p>
+                  <p className="text-xs font-sans font-bold text-zinc-400">FULL-STACK STORE</p>
                   <p className="text-sm font-bold text-white">Product Browsing & Checkout System</p>
                 </div>
               </div>
-              <span className="text-[10px] font-mono bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded border border-emerald-500/30">
+              <span className="text-[10px] font-sans font-bold bg-emerald-500/20 text-emerald-400 px-2 py-1 rounded border border-emerald-500/30">
                 SECURE AUTH
               </span>
             </div>
 
             <div className="grid grid-cols-2 gap-2">
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800">
-                <p className="text-[10px] font-mono text-zinc-500">CHECKOUT FLOW</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">CHECKOUT FLOW</p>
                 <p className="text-xs font-bold text-white mt-1">Cart & Order Pipeline</p>
               </div>
               <div className="bg-zinc-900/60 p-3 rounded-lg border border-zinc-800">
-                <p className="text-[10px] font-mono text-zinc-500">BACKEND DATABASE</p>
+                <p className="text-[10px] font-sans font-bold text-zinc-500">BACKEND DATABASE</p>
                 <p className="text-xs font-bold text-emerald-400 mt-1">MongoDB Store</p>
               </div>
             </div>

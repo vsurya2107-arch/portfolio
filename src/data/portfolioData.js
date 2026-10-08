@@ -30,7 +30,7 @@ export const personalData = {
     email: "vsurya2107@gmail.com",
     github: "https://github.com/vsurya2107-arch",
     linkedin: "https://www.linkedin.com/in/v-surya-689436387",
-    location: "Tamil Nadu, India"
+    location: "Chennai, India | Open to Remote Opportunities"
   },
   assets: {
     portrait: "/surya_portrait.png",
@@ -47,14 +47,14 @@ export const personalData = {
     "Database System Design"
   ],
   summary: [
-    "I am an enthusiastic Full-Stack Developer and B.Tech Information Technology student with a strong focus on building modern web applications and integrating AI capabilities into real-world products.",
-    "I am proficient in React.js, Node.js, Express.js, MongoDB, JavaScript, Python, C++, HTML5, and CSS3.",
-    "I have practical experience architecting full-stack MERN applications from scratch, designing database schemas, building RESTful APIs, and implementing smart AI features.",
-    "I am seeking full-stack and AI-enabled software developer opportunities to contribute clean, scalable code to impactful web systems."
+    "I am a Full-Stack MERN Stack Developer and B.Tech Information Technology student specializing in architecting modern web applications, scalable RESTful APIs, and AI-enabled software solutions.",
+    "Proficient in React.js, Node.js, Express.js, MongoDB, JavaScript (ES6+), Python, HTML5, and CSS3, with strong focus on clean code architecture and responsive UI design.",
+    "I have hands-on experience building full-stack web applications from scratch, designing MongoDB schema models, implementing RESTful API routing, and integrating intelligent AI endpoints.",
+    "Actively seeking Full-Stack Developer and AI-enabled Software Developer opportunities to engineer scalable, high-impact digital web products."
   ],
-  objective: "To obtain a Full-Stack Developer or AI-enabled Software Developer position in a growth-oriented team where I can apply my expertise in React, Node.js, MongoDB, RESTful APIs, and AI integrations, contribute to production web systems, and engineer reliable digital products.",
+  objective: "To secure a Full-Stack Developer or AI-enabled Software Developer role in a growth-oriented engineering team where I can leverage my expertise in React, Node.js, Express, MongoDB, RESTful APIs, and AI integrations to build production-grade web systems.",
   languages: [
-    { name: "Tamil", proficiency: "Native / Professional Proficiency" },
+    { name: "Tamil", proficiency: "Native" },
     { name: "English", proficiency: "Professional Working Proficiency" }
   ],
   personalInterest: {
@@ -108,7 +108,7 @@ export const mainProjects = [
     flagship: true,
     description: "HOMIQ is a digital platform engineered to unify and streamline the home construction lifecycle.\nIt connects homeowners directly with civil engineers, contractors, and material suppliers while offering smart digital tools for planning, cost estimation, and layout visualization.",
     problem: "Homeowners struggle with fragmented communication, opaque cost estimates, and lack of visual layout clarity when coordinating home construction with civil engineers and suppliers.",
-    contribution: "Architected and built full-stack MERN features including homeowner-engineer matchmaking workflows, digital floor plan preview views, dynamic cost calculation tools, and AI-assisted layout suggestions.",
+    contribution: "Engineered key full-stack modules including homeowner-engineer matchmaking workflows, dynamic material cost calculation logic, MongoDB schemas, RESTful API endpoints, and AI layout planning integration.",
     keyFeatures: [
       "Homeowner & Civil Engineer Matchmaking Portal",
       "Dynamic Construction Cost & Material Quantity Estimator",
@@ -116,6 +116,7 @@ export const mainProjects = [
       "2D Floor Plan & 3D Visualization Preview Module"
     ],
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JavaScript", "AI Integration"],
+    engineeringHighlights: ["MERN Stack", "RESTful APIs", "MongoDB Schemas", "JWT Authentication", "AI Integration", "Responsive UI"],
     outcome: "Created a unified digital construction management platform that replaces fragmented offline processes with transparent project coordination, engineer matching, and cost control.",
     github: null,
     live: null,
@@ -124,30 +125,71 @@ export const mainProjects = [
     image: homiqImg,
     caseStudy: {
       buttonLabel: "EXPLORE HOMIQ CASE STUDY",
-      badgeLabel: "FLAGSHIP SYSTEM CASE STUDY // HOMIQ",
+      badgeLabel: "TECHNICAL CASE STUDY // HOMIQ",
       badgeTag: "FULL-STACK MERN + AI",
-      problemStatement: "Home construction in developing urban regions is heavily fragmented. Homeowners struggle with non-transparent pricing, unverified contractor selection, and difficulty visualizing architectural layouts prior to construction commitment.",
-      solution: "HOMIQ provides an integrated web platform connecting homeowners directly with verified civil engineers and suppliers. The system embeds AI-assisted planning assistance, cost calculation logic, and visual layout previews.",
-      myRole: "Full-Stack Developer — Designed MERN backend endpoints, MongoDB schemas, React UI components, and integrated AI planning assistance algorithms.",
-      sections: [
-        { label: "4. SYSTEM ARCHITECTURE", text: "Decoupled MERN stack architecture featuring a React SPA frontend communicating with a RESTful Express.js/Node.js API backend connected to a MongoDB database." },
-        { label: "5. FRONTEND ARCHITECTURE", text: "Component-driven React layout structured into stateful forms, interactive cost calculator modules, modal preview views, and responsive CSS styling." },
-        { label: "6. BACKEND ARCHITECTURE", text: "Node.js REST API with Express routing, request validation middleware, modular controller logic, and centralized error handling." },
-        { label: "7. DATABASE DESIGN", text: "MongoDB document collections for Users (Homeowners, Engineers, Contractors), Construction Projects, Quotations, and Floor Plan Specifications." },
-        { label: "8. AUTHENTICATION", text: "Secure user registration and session management ensuring role-based access for homeowners and engineering professionals." },
-        { label: "9. API STRUCTURE", text: "RESTful JSON API endpoints supporting user registration, project creation, engineer queries, cost calculations, and layout generation requests." },
-        { label: "10. AI INTEGRATION", text: "AI-assisted planning feature utilizing smart prompt parameters to generate layout recommendations, space utilization advice, and preliminary material estimates." }
+      problemStatement: "Home construction in developing urban regions is heavily fragmented. Homeowners face non-transparent material pricing, difficulty finding verified civil engineers, and lack visual layout clarity before committing capital.",
+      solution: "HOMIQ provides an integrated web platform connecting homeowners directly with verified civil engineers and suppliers. The system embeds AI-assisted layout suggestions, dynamic cost estimation logic, and visual 2D/3D floor plan previews.",
+      myContribution: [
+        { area: "Frontend Development", detail: "Built modular React components for interactive project dashboards, engineer directory filtering, and dynamic calculator interfaces." },
+        { area: "Backend / API Development", detail: "Developed RESTful Express.js API endpoints for user registration, engineer queries, quote creation, and project status updates." },
+        { area: "Database Implementation", detail: "Designed MongoDB document models for Users, Projects, Quotations, and Architectural Specs with indexed lookup fields." },
+        { area: "Authentication & Security", detail: "Implemented JWT token authentication and role-based route middleware separating Homeowner, Engineer, and Contractor access." },
+        { area: "AI Integration", detail: "Connected AI prompt handling services that return structured room layout suggestions based on user spatial inputs." },
+        { area: "Cost Estimation Engine", detail: "Built client and server-side calculation algorithms estimating material requirements (cement, steel, bricks) from square-footage parameters." }
       ],
-      majorFeatures: [
-        "Verified Civil Engineer & Contractor Booking Directory",
-        "Automated Construction Cost & Material Quantity Estimator",
-        "AI-Assisted Architectural Layout Generator",
-        "2D Floor Plan & 3D Visualization Viewer Module"
+      architecture: {
+        flow: [
+          { step: "Frontend SPA", desc: "React.js client application rendering dynamic forms, dashboards, and visual preview components." },
+          { step: "API / Backend Server", desc: "Node.js & Express.js REST API layer with request validation middleware and business logic routing." },
+          { step: "Database Layer", desc: "MongoDB document store managing collections for users, projects, quotes, and structural configurations." },
+          { step: "Services & Integrations", desc: "JWT session authentication middleware and external AI service endpoints for smart spatial planning." }
+        ]
+      },
+      apiFlow: [
+        { step: "1. User Action", detail: "Homeowner enters plot dimensions, room counts, and budget parameters on React UI." },
+        { step: "2. Frontend Dispatch", detail: "React component validates inputs and dispatches HTTP POST request to API endpoint." },
+        { step: "3. API Endpoint", detail: "Express route handler (`/api/projects/estimate`) receives request with Bearer JWT token." },
+        { step: "4. Business Logic", detail: "Express controller validates token role, executes cost algorithm, and formats spatial prompt for AI engine." },
+        { step: "5. Database & AI Services", detail: "MongoDB queries base material rates; AI API computes optimized spatial room configuration." },
+        { step: "6. JSON Response", detail: "Backend sends structured JSON payload containing itemized cost estimates and layout recommendations." },
+        { step: "7. UI Render", detail: "React updates state and renders interactive cost breakdown tables and 2D floor plan preview cards." }
       ],
-      technicalChallenges: "Synchronizing dynamic cost calculations across varying regional material rates while ensuring real-time UI updates in React.",
-      solutionsImplemented: "Implemented memoized client-side state calculators backed by structured MongoDB pricing schemas for instant feedback without API latency.",
-      engineeringDecisions: "Chose MERN stack due to JavaScript end-to-end consistency, native JSON document handling in MongoDB, and rapid client-side rendering capabilities.",
-      futureImprovements: "Integration of WebSocket real-time chat between homeowners and engineers, along with WebGL 3D model interaction."
+      database: {
+        technology: "MongoDB (NoSQL Document Store)",
+        ormLayer: "Mongoose ODM / Native Drivers",
+        models: [
+          { name: "Users", fields: "name, email, passwordHash, role (homeowner/engineer/contractor), phone, location, verificationStatus" },
+          { name: "Projects", fields: "homeownerId, title, plotAreaSqFt, budgetRange, status (draft/pending_quote/approved/in_progress), createdAt" },
+          { name: "Quotations", fields: "projectId, engineerId, materialCost, laborCost, totalEstimate, breakdownItems, approvalStatus" },
+          { name: "FloorPlans", fields: "projectId, dimensions, roomConfig (bedrooms, bathrooms, kitchen), layoutDataJson, previewImageUrl" }
+        ]
+      },
+      authentication: {
+        provider: "JWT (JSON Web Tokens) & bcrypt.js",
+        protectedRoutes: "Express authorization middleware guarding project submission, quotation approvals, and engineer dashboard endpoints.",
+        userSession: "Stateless token-based authentication with user claims transmitted via HTTP Authorization headers.",
+        roleBasedAccess: "Role middleware enforcing explicit access boundaries for Homeowner, Civil Engineer, and Contractor actions."
+      },
+      aiIntegration: {
+        purpose: "Assists homeowners with preliminary spatial room planning, structural feasibility, and material quantity recommendations.",
+        flow: "User Input (plot dimensions, requirements) → Backend AI Request Handler → Prompt Processing & Constraints Evaluation → Structured JSON Recommendation → React Visual Floorplan & Spec Render.",
+        wording: "Structured prompt parameter evaluation generating room spatial distributions and preliminary construction material estimates."
+      },
+      engineeringDecisionsList: [
+        {
+          challenge: "Managing multi-role project workflow transitions between homeowners, civil engineers, and material suppliers.",
+          decision: "Architected a centralized MongoDB project document model with explicit state-machine status flags (`DRAFT`, `PENDING_QUOTE`, `APPROVED`, `IN_PROGRESS`).",
+          implementation: "Implemented Express route middleware that validates user role permissions and current project status before allowing status updates.",
+          result: "Prevented invalid state jumps, ensured strict access control, and provided clear project tracking across all user roles."
+        },
+        {
+          challenge: "Synchronizing dynamic cost calculations across varying material rates without causing UI latency.",
+          decision: "Divided calculation logic into client-side instant preview estimators backed by indexed server-side MongoDB rate schemas.",
+          implementation: "Used memoized React custom hooks for instant UI updates, validating final estimates via Express API endpoints.",
+          result: "Delivered instant visual feedback to users while maintaining accurate, server-validated cost records."
+        }
+      ],
+      futureImprovements: "Integration of real-time WebSocket chat messaging between homeowners and engineers, along with WebGL 3D layout rendering."
     }
   },
   {
@@ -167,6 +209,7 @@ export const mainProjects = [
       "Low-Bandwidth Accessible Web Interface"
     ],
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "Python"],
+    engineeringHighlights: ["React.js", "Express.js", "Python ML", "REST APIs", "Low-Bandwidth UI"],
     outcome: "Delivered an accessible AgTech application facilitating early crop disease detection and practical treatment recommendations for farmers.",
     github: null,
     live: null,
@@ -179,22 +222,27 @@ export const mainProjects = [
       badgeTag: "AGTECH & MACHINE LEARNING",
       problemStatement: "Farmers in rural regions suffer severe crop yield losses due to delayed identification of plant diseases and lack of accessible diagnostic tools.",
       solution: "PASUMAI provides a smart AgTech web system for crop disease diagnostics, pest management advisories, and environmental condition monitoring.",
-      myRole: "Full-Stack Developer — Built responsive MERN stack user interfaces and integrated Python-driven machine learning diagnostic workflows.",
-      sections: [
-        { label: "AGRICULTURE WORKFLOW", text: "Farmers upload crop leaf photos or select symptom categories to initiate dynamic diagnostic checks." },
-        { label: "DISEASE & PEST MANAGEMENT", text: "Diagnostic classification matches reported symptoms against crop pathology logic to output specific treatment advisories." },
-        { label: "SOIL & ENVIRONMENTAL MONITORING", text: "Provides recommendations based on regional weather, humidity, and soil condition indicators." },
-        { label: "BACKEND & API ARCHITECTURE", text: "Express.js REST endpoints handle image payload parsing, invoke Python diagnostic models, and return structured JSON responses." }
+      myContribution: [
+        { area: "Frontend Development", detail: "Created accessible, high-contrast React UI layouts optimized for mobile browser access in rural areas." },
+        { area: "Backend API Architecture", detail: "Built Node.js & Express.js REST endpoints handling image upload parsing and diagnostic routing." },
+        { area: "ML Service Integration", detail: "Connected Python image classification model scripts to evaluate plant leaf symptoms." }
       ],
-      majorFeatures: [
-        "Real-Time Image & Symptom Crop Disease Diagnostics",
-        "Actionable Pest Control & Field Advisory Guidance",
-        "Environmental & Soil Condition Monitoring Dashboard",
-        "Low-Bandwidth Accessible Web Interface"
+      architecture: {
+        flow: [
+          { step: "React SPA", desc: "Mobile-responsive user interface for selecting crop symptoms or uploading leaf images." },
+          { step: "Express API Bridge", desc: "REST server receiving diagnostic payloads and forwarding images to diagnostic scripts." },
+          { step: "Python ML Engine", desc: "Image classification scripts processing spatial features against plant pathology datasets." },
+          { step: "MongoDB Store", desc: "Database storing crop disease profiles, treatment guides, and historical diagnostic logs." }
+        ]
+      },
+      engineeringDecisionsList: [
+        {
+          challenge: "Processing crop image diagnostic requests over low-bandwidth rural mobile networks without timing out.",
+          decision: "Implemented client-side image compression in JavaScript prior to API dispatch.",
+          implementation: "Used HTML5 Canvas API to downscale leaf images to optimal classification resolution before sending payloads.",
+          result: "Reduced upload payload size by over 75%, resulting in faster diagnostic responses on 3G mobile networks."
+        }
       ],
-      technicalChallenges: "Processing image diagnostic requests over low-bandwidth rural mobile networks without timing out.",
-      solutionsImplemented: "Implemented client-side image compression prior to API dispatch and optimized JSON diagnostic responses.",
-      engineeringDecisions: "Combined React SPA frontend with Python backend diagnostic routines for computational flexibility.",
       futureImprovements: "Adding Progressive Web App (PWA) offline caching for field use in remote agricultural areas."
     }
   },
@@ -215,6 +263,7 @@ export const mainProjects = [
       "Proactive Account Lock & Security Alerting"
     ],
     technologies: ["JavaScript", "Node.js", "Express.js", "MongoDB", "Python"],
+    engineeringHighlights: ["Behavioral Analytics", "Node.js REST APIs", "Rule Engine", "MongoDB Logs"],
     outcome: "Established an automated fraud detection framework identifying suspicious account behavior early to maintain digital application security.",
     github: null,
     live: null,
@@ -227,22 +276,27 @@ export const mainProjects = [
       badgeTag: "CYBERSECURITY & ANALYTICS",
       problemStatement: "Digital financial platforms face severe security threats from money mule accounts created to facilitate illegal money movements and fraudulent transactions.",
       solution: "An automated security system analyzing account activity patterns, transfer frequencies, and behavioral anomalies to flag suspicious accounts early.",
-      myRole: "Full-Stack Developer & Security Analyst — Implemented rule-based anomaly detection logic and backend behavior monitoring REST APIs in Node.js and Python.",
-      sections: [
-        { label: "BEHAVIORAL ANALYSIS ENGINE", text: "Monitors account access patterns, velocity spikes in fund movements, and frequent credential modifications." },
-        { label: "SUSPICIOUS PATTERN DETECTION", text: "Rule-based engine flags unusual transaction behaviors against preset financial fraud risk profiles." },
-        { label: "ACCOUNT RISK SCORING", text: "Calculates real-time risk scores (Low, Medium, High) triggering automated security alerts or manual verification." },
-        { label: "BACKEND & DATA FLOW", text: "Express.js API endpoints record event logs in MongoDB and return real-time status indicators to security dashboards." }
+      myContribution: [
+        { area: "Anomaly Detection Logic", detail: "Built rule engine functions evaluating transaction velocity spikes and rapid credential updates." },
+        { area: "Backend API & Logging", detail: "Designed Express.js REST API endpoints to capture account audit logs into indexed MongoDB collections." },
+        { area: "Risk Dashboard UI", detail: "Developed real-time status indicators classifying user accounts into Low, Medium, or High security risk levels." }
       ],
-      majorFeatures: [
-        "Behavioral Anomaly & Fraud Risk Analytics",
-        "Rule Engine Suspicious Pattern Detection",
-        "Real-Time Account Scoring Dashboard",
-        "Proactive Account Lock & Security Alerting"
+      architecture: {
+        flow: [
+          { step: "Event Stream", desc: "Account transaction and login activity events sent to logging API endpoint." },
+          { step: "Rule Engine", desc: "Node.js logic evaluating event frequency, transaction amounts, and geographic anomalies." },
+          { step: "MongoDB Log Store", desc: "High-throughput indexed database storing event histories and risk score records." },
+          { step: "Security Dashboard", desc: "Analyst dashboard displaying flagged accounts and real-time risk status." }
+        ]
+      },
+      engineeringDecisionsList: [
+        {
+          challenge: "Minimizing false positive fraud alerts while evaluating transaction events in real time.",
+          decision: "Created multi-condition rule thresholds requiring correlated suspicious indicators before triggering high-level alerts.",
+          implementation: "Structured composite MongoDB query pipelines analyzing 24-hour event windows for velocity anomalies.",
+          result: "Significantly reduced false positive flags while accurately detecting high-risk account anomalies."
+        }
       ],
-      technicalChallenges: "Minimizing false positive risk flags while maintaining high-speed real-time transaction event evaluation.",
-      solutionsImplemented: "Created multi-condition rule thresholds requiring multiple correlated suspicious events before flagging an account.",
-      engineeringDecisions: "Selected MongoDB indexed logs for high-throughput behavioral event reads and fast query performance.",
       futureImprovements: "Integrating graph database analysis to detect multi-account mule networks and collusion chains."
     }
   },
@@ -263,6 +317,7 @@ export const mainProjects = [
       "Inclusive & Accessible UI Dashboard"
     ],
     technologies: ["Python", "JavaScript", "React.js", "HTML5", "CSS3"],
+    engineeringHighlights: ["Computer Vision", "Python ML", "React UI", "Web Speech API"],
     outcome: "Built an interactive AI web tool converting sign language gestures into text and speech for enhanced communication accessibility.",
     github: null,
     live: null,
@@ -275,22 +330,27 @@ export const mainProjects = [
       badgeTag: "AI VISION & WEB TECH",
       problemStatement: "Communication barriers between sign language speakers and non-signers create accessibility hurdles in daily digital and in-person interactions.",
       solution: "An AI gesture recognition web tool converting video sign language hand gestures into readable text streams and synthesized speech audio output.",
-      myRole: "Frontend & AI Developer — Developed the React gesture dashboard and connected computer vision ML gesture classification models.",
-      sections: [
-        { label: "REAL-TIME GESTURE RECOGNITION", text: "Captures web camera video frames to extract hand landmark coordinates in real time." },
-        { label: "VISION MACHINE LEARNING STREAM", text: "Python-driven classification model evaluates spatial landmark coordinates to recognize sign language gestures." },
-        { label: "GESTURE-TO-TEXT PIPELINE", text: "Sequential gesture predictions are translated into coherent text words and displayed on the interactive React UI." },
-        { label: "TEXT-TO-SPEECH AUDIO PIPELINE", text: "Integrated Web Speech API synthesizes generated text into audible speech output for seamless communication." }
+      myContribution: [
+        { area: "React Dashboard UI", detail: "Designed accessible, real-time video feed interface displaying gesture text predictions." },
+        { area: "Vision Model Pipeline", detail: "Connected Python ML gesture classification scripts processing hand spatial landmark coordinates." },
+        { area: "Text-to-Speech Integration", detail: "Integrated browser Web Speech API for zero-dependency audio voice playback of recognized gestures." }
       ],
-      majorFeatures: [
-        "Real-Time Hand Gesture Computer Vision Recognition",
-        "Machine Learning Gesture-to-Text Stream Engine",
-        "Integrated Text-to-Speech Audio Output Pipeline",
-        "Inclusive & Accessible UI Dashboard"
+      architecture: {
+        flow: [
+          { step: "Webcam Video Stream", desc: "HTML5 video element capturing live camera frames." },
+          { step: "Landmark Extraction", desc: "Extracting 21 3D hand landmark coordinates per frame." },
+          { step: "ML Classifier", desc: "Python model predicting matching gesture sign class." },
+          { step: "Speech Synthesis", desc: "Web Speech API rendering audible voice output on React UI." }
+        ]
+      },
+      engineeringDecisionsList: [
+        {
+          challenge: "Maintaining smooth 30 FPS video frame gesture recognition without causing browser UI lag.",
+          decision: "Offloaded frame subsampling and landmark coordinate evaluation to lightweight inference model callbacks.",
+          implementation: "Utilized `requestAnimationFrame` throttled state updates to decouple video processing from React renders.",
+          result: "Achieved fluid 30 FPS video playback and real-time gesture text rendering without UI freeze."
+        }
       ],
-      technicalChallenges: "Maintaining smooth 30 FPS video frame gesture recognition without causing browser UI thread lag.",
-      solutionsImplemented: "Utilized lightweight frame subsampling and offloaded landmark coordinate evaluation to optimized inference models.",
-      engineeringDecisions: "Used Web Speech API for native, zero-dependency browser text-to-speech audio rendering.",
       futureImprovements: "Expanding dataset coverage to support continuous sentence translation and two-handed complex signs."
     }
   },
@@ -311,6 +371,7 @@ export const mainProjects = [
       "Full-Stack Express & MongoDB Persistence"
     ],
     technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "CSS3"],
+    engineeringHighlights: ["MERN Stack", "JWT Authentication", "MongoDB Schemas", "Cart Management"],
     outcome: "Created a responsive full-stack e-commerce web application with reliable database operations and secure user account flows.",
     github: null,
     live: null,
@@ -323,22 +384,27 @@ export const mainProjects = [
       badgeTag: "FULL-STACK MERN APP",
       problemStatement: "Modern online shoppers require fast product filtering, intuitive shopping carts, and secure account management across desktop and mobile devices.",
       solution: "A full-stack MERN e-commerce application featuring JWT user authentication, persistent shopping cart management, catalog search, and order checkout APIs.",
-      myRole: "Full-Stack Developer — Architected MongoDB collection schemas, built Express.js REST APIs, and authored responsive React UI components.",
-      sections: [
-        { label: "PRODUCT CATALOG & SEARCH", text: "Dynamic search and category filtering supported by MongoDB indexed product collections." },
-        { label: "JWT AUTHENTICATION & SESSIONS", text: "Secure user registration, password hashing with bcrypt, and token-based protected API routes." },
-        { label: "SHOPPING CART MANAGEMENT", text: "Persistent cart state synchronized between client React state and user database sessions." },
-        { label: "ORDER CHECKOUT WORKFLOW", text: "Full checkout pipeline processing item quantities, price calculations, shipping data, and order history." }
+      myContribution: [
+        { area: "MERN Stack Frontend & Backend", detail: "Built responsive React store pages and connected Node.js/Express REST API endpoints." },
+        { area: "JWT Session Security", detail: "Implemented password hashing with bcrypt and JWT token protection for user accounts and checkout." },
+        { area: "Database Schema Modeling", detail: "Designed MongoDB collections for Products, Users, Cart Sessions, and Completed Orders." }
       ],
-      majorFeatures: [
-        "Product Browsing & Dynamic Filter Search",
-        "Secure JWT User Authentication & Account System",
-        "Persistent Shopping Cart & Order Checkout Workflow",
-        "Full-Stack Express & MongoDB Persistence"
+      architecture: {
+        flow: [
+          { step: "React Shopping SPA", desc: "Catalog grid with search filtering, product detail modals, and cart drawers." },
+          { step: "Express REST API", desc: "Routing layers for `/api/products`, `/api/auth`, `/api/cart`, and `/api/orders`." },
+          { step: "JWT Middleware", desc: "Authentication verification enforcing session access on cart and checkout operations." },
+          { step: "MongoDB Store", desc: "Document database maintaining product inventory and order logs." }
+        ]
+      },
+      engineeringDecisionsList: [
+        {
+          challenge: "Preventing shopping cart state inconsistencies during concurrent session updates and stock checks.",
+          decision: "Utilized atomic MongoDB update operations (`$inc`, `$push`) for consistent cart transaction updates.",
+          implementation: "Designed express controller methods that lock inventory state during checkout pipeline processing.",
+          result: "Guaranteed accurate cart calculations and order accuracy across user sessions."
+        }
       ],
-      technicalChallenges: "Preventing cart state inconsistencies during concurrent user updates and product stock checks.",
-      solutionsImplemented: "Utilized atomic MongoDB update operations ($inc, $push) for consistent transaction handling.",
-      engineeringDecisions: "Chose MERN stack architecture for end-to-end JavaScript data handling and fast client-side rendering.",
       futureImprovements: "Integrating Stripe payment gateway processing and automated email order receipt notifications."
     }
   }

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { GraduationCap, Target, Dumbbell, Globe, CheckCircle, Award } from 'lucide-react';
+import { GraduationCap, Dumbbell, Globe, CheckCircle } from 'lucide-react';
 import { personalData } from '../data/portfolioData';
 
 export default function About() {
@@ -36,15 +36,15 @@ export default function About() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-[#FF0033]/5 rounded-bl-full pointer-events-none" />
               
               <p className="text-xl sm:text-2xl font-bold text-zinc-900 leading-relaxed mb-6">
-                I am an enthusiastic <span className="text-[#FF0033]">B.Tech Information Technology student</span> at Suguna College of Engineering with a strong passion for software development and modern web technologies.
+                I am a <span className="text-[#FF0033]">Full-Stack MERN Stack Developer</span> and B.Tech Information Technology student specializing in architecting modern web applications, scalable REST APIs, and AI-enabled software solutions.
               </p>
 
               <div className="space-y-4 text-base text-zinc-700 leading-relaxed font-normal">
                 <p>
-                  I am proficient in the <strong className="text-zinc-950">MERN Stack (MongoDB, Express.js, React.js, Node.js)</strong>, JavaScript, Python, C++, HTML5, and CSS3, with a focus on integrating practical AI capabilities into modern web applications.
+                  With core expertise across <strong className="text-zinc-950">React.js, Node.js, Express.js, and MongoDB</strong>, I build end-to-end full-stack applications, design structured database schemas, and integrate intelligent AI capabilities to solve real-world engineering problems.
                 </p>
                 <p>
-                  I am actively seeking <strong className="text-[#FF0033]">Full-Stack Developer and AI-enabled Software Developer opportunities</strong> to apply my technical skills, architect scalable web software, and engineer reliable digital products.
+                  I am actively seeking <strong className="text-[#FF0033]">Full-Stack Developer and AI-enabled Software Developer opportunities</strong> to engineer scalable digital products and contribute clean, reliable code to production systems.
                 </p>
               </div>
 

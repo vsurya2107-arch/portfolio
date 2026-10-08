@@ -26,7 +26,7 @@ export default function Navbar({ activeSection = "hero" }) {
     { name: "ABOUT", href: "#about", id: "about" },
     { name: "SKILLS", href: "#skills", id: "skills" },
     { name: "EXPERIENCE", href: "#mentoring", id: "mentoring" },
-    { name: "WORK", href: "#work", id: "work" },
+    { name: "PROJECTS", href: "#work", id: "work" },
     { name: "RESUME", href: "#resume", id: "resume" },
     { name: "CONTACT", href: "#contact", id: "contact" }
   ];
