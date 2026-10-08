@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-white: #ffffff;
+    --bg-surface: #f8f9fa;
+    --bg-dark: #070709;
+    --bg-dark-surface: #121216;
+    
+    --text-primary: #09090b;
+    --text-secondary: #52525b;
+    --text-muted: #8e8e93;
+    
+    --crystal-red: #ff0033;
+    --crystal-red-hover: #e0002d;
+    --crystal-red-light: rgba(255, 0, 51, 0.08);
+    --crystal-red-glow: rgba(255, 0, 51, 0.35);
+    
+    --font-main: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'Space Mono', monospace;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-main);
+    color: var(--text-primary);
+    background-color: var(--bg-white);
+  }
+
+  body {
+    overflow-x: hidden;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Custom Utilities & Components */
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+.text-crystal-red {
+  color: var(--crystal-red);
+}
+
+.bg-crystal-red {
+  background-color: var(--crystal-red);
+}
+
+.border-crystal-red {
+  border-color: var(--crystal-red);
+}
+
+/* Red Glow Effects */
+.shadow-red-glow {
+  box-shadow: 0 10px 30px -10px rgba(255, 0, 51, 0.4);
+}
+
+.shadow-red-glow-lg {
+  box-shadow: 0 20px 50px -15px rgba(255, 0, 51, 0.5);
+}
+
+.glow-pill {
+  position: relative;
+}
+
+.glow-pill::after {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(90deg, #ff0033, #ff4d6d, #ff0033);
+  border-radius: inherit;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  filter: blur(8px);
+}
+
+.glow-pill:hover::after {
+  opacity: 0.7;
+}
+
+/* Subtle Grid Pattern */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.03) 1px, transparent 1px);
+}
+
+.bg-grid-pattern-dark {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+}
+
+/* Dynamic Noise Overlay */
+.bg-noise {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #33333d;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--crystal-red);
+}
+
+/* Editorial Typography Helpers */
+.text-stroke-dark {
+  -webkit-text-stroke: 1.5px #09090b;
+  color: transparent;
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 1.5px #ffffff;
+  color: transparent;
+}
+
+
