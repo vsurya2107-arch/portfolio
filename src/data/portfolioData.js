@@ -150,7 +150,7 @@ export const mainProjects = [
         { step: "2. Frontend Dispatch", detail: "React component validates inputs and dispatches HTTP POST request to API endpoint." },
         { step: "3. API Endpoint", detail: "Express route handler receives authenticated estimation request with Bearer JWT token." },
         { step: "4. Business Logic", detail: "Express controller validates token role, executes cost algorithm, and formats spatial prompt for AI engine." },
-        { step: "5. Database & AI Services", detail: "MongoDB queries base material rates; AI API computes optimized spatial room configuration." },
+        { step: "5. Database & AI Services", detail: "Database queries rate benchmarks; AI service generates spatial room recommendations." },
         { step: "6. JSON Response", detail: "Backend sends structured JSON payload containing itemized cost estimates and layout recommendations." },
         { step: "7. UI Render", detail: "React updates state and renders interactive cost breakdown tables and 2D floor plan preview cards." }
       ],
@@ -172,19 +172,19 @@ export const mainProjects = [
       },
       aiIntegration: {
         purpose: "Assists homeowners with preliminary spatial room planning, structural feasibility, and material quantity recommendations.",
-        flow: "User Input (plot dimensions, requirements) → Backend AI Request Handler → Prompt Processing & Constraints Evaluation → Structured JSON Recommendation → React Visual Floorplan & Spec Render.",
+        flow: "User Spatial Input → Backend AI Service Handler → Prompt Evaluation → Structured JSON Payload → React Floorplan Preview.",
         wording: "Structured prompt parameter evaluation generating room spatial distributions and preliminary construction material estimates."
       },
       engineeringDecisionsList: [
         {
           challenge: "Managing multi-role project workflow transitions between homeowners, civil engineers, and material suppliers.",
-          decision: "Architected a centralized MongoDB project document model with explicit state-machine status flags (`DRAFT`, `PENDING_QUOTE`, `APPROVED`, `IN_PROGRESS`).",
-          implementation: "Implemented Express route middleware that validates user role permissions and current project status before allowing status updates.",
+          decision: "Architected a centralized MongoDB project document model with explicit state-machine status transition logic.",
+          implementation: "Implemented Express route middleware that validates user role permissions and project state before permitting status updates.",
           result: "Prevented invalid state jumps, ensured strict access control, and provided clear project tracking across all user roles."
         },
         {
           challenge: "Synchronizing dynamic cost calculations across varying material rates without causing UI latency.",
-          decision: "Divided calculation logic into client-side instant preview estimators backed by indexed server-side MongoDB rate schemas.",
+          decision: "Divided calculation logic into responsive client-side preview interfaces backed by server-validated rate schemas.",
           implementation: "Used memoized React custom hooks for instant UI updates, validating final estimates via Express API endpoints.",
           result: "Delivered instant visual feedback to users while maintaining accurate, server-validated cost records."
         }
