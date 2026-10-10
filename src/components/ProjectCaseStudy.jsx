@@ -77,7 +77,7 @@ export default function ProjectCaseStudy({ project }) {
               {/* Header Tagline */}
               <div className="flex items-center justify-between border-b border-zinc-200/80 pb-3">
                 <div className="flex items-center space-x-2">
-                  <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+                  <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
                   <span className="text-xs font-bold text-zinc-900 uppercase tracking-wide">
                     {caseStudy.badgeLabel || `Technical Case Study // ${projectTitleUpper}`}
                   </span>

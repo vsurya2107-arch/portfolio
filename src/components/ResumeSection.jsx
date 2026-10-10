@@ -35,7 +35,7 @@ export default function ResumeSection() {
             {/* Left Column: Career Objective & Details */}
             <div className="lg:col-span-8 space-y-5">
               <div className="flex items-center space-x-2.5">
-                <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+                <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
                 <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
                   CURRICULUM VITAE
                 </span>

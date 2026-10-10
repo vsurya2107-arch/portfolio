@@ -23,7 +23,7 @@ export default function Hero() {
           >
             {/* Minimal Sub-Eyebrow */}
             <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+              <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
               <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
                 Full-Stack Developer & IT Engineer
               </span>

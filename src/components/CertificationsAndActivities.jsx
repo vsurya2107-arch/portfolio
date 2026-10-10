@@ -45,7 +45,7 @@ export default function CertificationsAndActivities() {
           <div className="lg:col-span-7 space-y-6">
             <div>
               <div className="flex items-center space-x-2.5 mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+                <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
                 <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
                   VERIFIED CREDENTIALS
                 </span>
@@ -180,7 +180,7 @@ export default function CertificationsAndActivities() {
           <div className="lg:col-span-5 space-y-6">
             <div>
               <div className="flex items-center space-x-2.5 mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+                <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
                 <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
                   ACTIVE ENGAGEMENT
                 </span>

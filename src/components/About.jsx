@@ -10,7 +10,7 @@ export default function About() {
         
         {/* Section Header */}
         <div className="flex items-center space-x-2.5 mb-3">
-          <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+          <span className="text-[#FF0033] font-mono font-bold text-xs select-none">//</span>
           <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
             BIOGRAPHY & BACKGROUND
           </span>
@@ -52,7 +52,7 @@ export default function About() {
                     key={idx}
                     className="p-3.5 bg-white rounded-xl border border-zinc-200 text-left"
                   >
-                    <div className="w-1.5 h-1.5 rounded-full bg-[#FF0033] mb-2" />
+                    <span className="text-[#FF0033] font-mono font-bold text-xs select-none block mb-1">//</span>
                     <p className="text-xs font-semibold text-zinc-900">{interest}</p>
                   </div>
                 ))}
