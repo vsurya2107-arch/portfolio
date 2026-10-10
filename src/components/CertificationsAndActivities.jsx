@@ -234,31 +234,31 @@ export default function CertificationsAndActivities() {
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.96, opacity: 0 }}
               onClick={(e) => e.stopPropagation()}
-              className="bg-white rounded-2xl max-w-3xl w-full border border-zinc-200 shadow-xl overflow-hidden flex flex-col max-h-[90vh]"
+              className="bg-white rounded-2xl max-w-4xl w-full border border-zinc-200 shadow-xl overflow-hidden flex flex-col max-h-[90vh]"
             >
-              <div className="p-4 sm:p-5 border-b border-zinc-200 flex items-center justify-between bg-zinc-50">
-                <div>
-                  <span className="text-xs font-bold text-[#FF0033] uppercase">
+              <div className="p-4 sm:p-5 border-b border-zinc-200 flex items-center justify-between bg-zinc-50 shrink-0">
+                <div className="min-w-0 pr-4">
+                  <span className="text-xs font-bold text-[#FF0033] uppercase block truncate">
                     Issuer: {singleCertModal.issuer}
                   </span>
-                  <h3 className="text-base font-extrabold text-zinc-950 mt-0.5">
+                  <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 mt-0.5 truncate">
                     {singleCertModal.title}
                   </h3>
                 </div>
                 <button
                   onClick={() => setSingleCertModal(null)}
-                  className="p-2 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-200 rounded-lg transition-colors cursor-pointer"
+                  className="p-2 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-200/80 rounded-lg transition-colors cursor-pointer shrink-0"
                   aria-label="Close Certificate Modal"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="p-4 sm:p-6 bg-zinc-100 flex items-center justify-center overflow-auto flex-1 min-h-[350px]">
+              <div className="p-4 sm:p-6 bg-white flex items-center justify-center overflow-auto flex-1 min-h-[300px]">
                 <img 
                   src={singleCertModal.image} 
                   alt={singleCertModal.title}
-                  className="max-h-[65vh] w-auto object-contain rounded-xl border border-zinc-200 shadow-sm"
+                  className="max-h-[68vh] max-w-full w-auto h-auto object-contain rounded-xl border border-zinc-200/80 shadow-sm"
                 />
               </div>
             </motion.div>
@@ -283,29 +283,29 @@ export default function CertificationsAndActivities() {
               onClick={(e) => e.stopPropagation()}
               className="bg-white rounded-2xl max-w-4xl w-full border border-zinc-200 shadow-xl overflow-hidden flex flex-col max-h-[92vh]"
             >
-              <div className="p-4 sm:p-5 border-b border-zinc-200 flex items-center justify-between bg-zinc-50">
-                <div>
-                  <span className="text-xs font-bold text-[#FF0033] uppercase">
+              <div className="p-4 sm:p-5 border-b border-zinc-200 flex items-center justify-between bg-zinc-50 shrink-0">
+                <div className="min-w-0 pr-4">
+                  <span className="text-xs font-bold text-[#FF0033] uppercase block truncate">
                     MongoDB Certificate {mongoCertIndex + 1} of 5
                   </span>
-                  <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 mt-0.5">
+                  <h3 className="text-base sm:text-lg font-extrabold text-zinc-950 mt-0.5 truncate">
                     {mongoCertData.certificates[mongoCertIndex].title}
                   </h3>
                 </div>
 
                 <button
                   onClick={() => setIsMongoModalOpen(false)}
-                  className="p-2 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-200 rounded-lg transition-colors cursor-pointer"
+                  className="p-2 text-zinc-500 hover:text-zinc-950 hover:bg-zinc-200/80 rounded-lg transition-colors cursor-pointer shrink-0"
                   aria-label="Close MongoDB Certificate Viewer"
                 >
                   <X className="w-5 h-5" />
                 </button>
               </div>
 
-              <div className="relative p-4 sm:p-6 bg-zinc-900 flex items-center justify-center flex-1 min-h-[360px] overflow-hidden">
+              <div className="relative p-4 sm:p-6 bg-white flex items-center justify-center flex-1 min-h-[320px] overflow-hidden border-b border-zinc-200">
                 <button
                   onClick={() => setMongoCertIndex((prev) => (prev === 0 ? mongoCertData.certificates.length - 1 : prev - 1))}
-                  className="absolute left-4 z-10 p-2.5 bg-zinc-950/80 hover:bg-[#FF0033] text-white rounded-full transition-colors cursor-pointer border border-zinc-700"
+                  className="absolute left-3 sm:left-5 z-10 p-2.5 bg-white/90 hover:bg-[#FF0033] text-zinc-800 hover:text-white rounded-full transition-colors cursor-pointer border border-zinc-200 shadow-md"
                   aria-label="Previous Certificate"
                 >
                   <ChevronLeft className="w-5 h-5" />
@@ -318,12 +318,12 @@ export default function CertificationsAndActivities() {
                   transition={{ duration: 0.2 }}
                   src={mongoCertData.certificates[mongoCertIndex].image} 
                   alt={mongoCertData.certificates[mongoCertIndex].title}
-                  className="max-h-[55vh] max-w-full w-auto object-contain rounded-xl border border-zinc-700 shadow-xl"
+                  className="max-h-[58vh] max-w-full w-auto h-auto object-contain rounded-xl border border-zinc-200/80 shadow-sm"
                 />
 
                 <button
                   onClick={() => setMongoCertIndex((prev) => (prev === mongoCertData.certificates.length - 1 ? 0 : prev + 1))}
-                  className="absolute right-4 z-10 p-2.5 bg-zinc-950/80 hover:bg-[#FF0033] text-white rounded-full transition-colors cursor-pointer border border-zinc-700"
+                  className="absolute right-3 sm:right-5 z-10 p-2.5 bg-white/90 hover:bg-[#FF0033] text-zinc-800 hover:text-white rounded-full transition-colors cursor-pointer border border-zinc-200 shadow-md"
                   aria-label="Next Certificate"
                 >
                   <ChevronRight className="w-5 h-5" />
