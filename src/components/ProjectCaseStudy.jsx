@@ -235,6 +235,14 @@ export default function ProjectCaseStudy({ project }) {
                 </div>
               )}
 
+              {/* Professional Confidentiality Notice */}
+              {caseStudy.confidentialityNotice && (
+                <div className="p-3.5 bg-zinc-50 rounded-xl border border-zinc-200/80 flex items-start space-x-2.5 text-xs text-zinc-500 font-normal">
+                  <ShieldCheck className="w-4 h-4 text-zinc-400 shrink-0 mt-0.5" />
+                  <p className="leading-relaxed">{caseStudy.confidentialityNotice}</p>
+                </div>
+              )}
+
               {/* Collapse Drawer Control */}
               <div className="pt-2 border-t border-zinc-200/80 flex justify-center">
                 <button

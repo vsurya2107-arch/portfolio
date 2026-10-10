@@ -135,7 +135,7 @@ export const mainProjects = [
         { area: "Database Implementation", detail: "Designed MongoDB document models for Users, Projects, Quotations, and Architectural Specs with indexed lookup fields." },
         { area: "Authentication & Security", detail: "Implemented JWT token authentication and role-based route middleware separating Homeowner, Engineer, and Contractor access." },
         { area: "AI Integration", detail: "Connected AI prompt handling services that return structured room layout suggestions based on user spatial inputs." },
-        { area: "Cost Estimation Engine", detail: "Built client and server-side calculation algorithms estimating material requirements (cement, steel, bricks) from square-footage parameters." }
+        { area: "Cost Estimation Engine", detail: "Engineered client and server-side calculation logic for estimating construction material quantities and budgetary breakdowns from user spatial inputs." }
       ],
       architecture: {
         flow: [
@@ -148,7 +148,7 @@ export const mainProjects = [
       apiFlow: [
         { step: "1. User Action", detail: "Homeowner enters plot dimensions, room counts, and budget parameters on React UI." },
         { step: "2. Frontend Dispatch", detail: "React component validates inputs and dispatches HTTP POST request to API endpoint." },
-        { step: "3. API Endpoint", detail: "Express route handler (`/api/projects/estimate`) receives request with Bearer JWT token." },
+        { step: "3. API Endpoint", detail: "Express route handler receives authenticated estimation request with Bearer JWT token." },
         { step: "4. Business Logic", detail: "Express controller validates token role, executes cost algorithm, and formats spatial prompt for AI engine." },
         { step: "5. Database & AI Services", detail: "MongoDB queries base material rates; AI API computes optimized spatial room configuration." },
         { step: "6. JSON Response", detail: "Backend sends structured JSON payload containing itemized cost estimates and layout recommendations." },
@@ -158,10 +158,10 @@ export const mainProjects = [
         technology: "MongoDB (NoSQL Document Store)",
         ormLayer: "Mongoose ODM / Native Drivers",
         models: [
-          { name: "Users", fields: "name, email, passwordHash, role (homeowner/engineer/contractor), phone, location, verificationStatus" },
-          { name: "Projects", fields: "homeownerId, title, plotAreaSqFt, budgetRange, status (draft/pending_quote/approved/in_progress), createdAt" },
-          { name: "Quotations", fields: "projectId, engineerId, materialCost, laborCost, totalEstimate, breakdownItems, approvalStatus" },
-          { name: "FloorPlans", fields: "projectId, dimensions, roomConfig (bedrooms, bathrooms, kitchen), layoutDataJson, previewImageUrl" }
+          { name: "Users", fields: "Authentication credentials, user roles (homeowner/engineer/contractor), profile details, and verification status" },
+          { name: "Projects", fields: "Homeowner metadata, plot parameters, target budget range, and lifecycle status flags" },
+          { name: "Quotations", fields: "Project references, engineer quotes, material/labor breakdown structures, and approval tracking" },
+          { name: "FloorPlans", fields: "Spatial dimensions, room configuration parameters, layout data structure, and preview references" }
         ]
       },
       authentication: {
@@ -189,7 +189,8 @@ export const mainProjects = [
           result: "Delivered instant visual feedback to users while maintaining accurate, server-validated cost records."
         }
       ],
-      futureImprovements: "Integration of real-time WebSocket chat messaging between homeowners and engineers, along with WebGL 3D layout rendering."
+      futureImprovements: "Integration of real-time WebSocket chat messaging between homeowners and engineers, along with WebGL 3D layout rendering.",
+      confidentialityNotice: "Note: Architecture diagrams, database abstractions, and workflows presented in this case study are high-level conceptual overviews prepared for portfolio demonstration purposes. Proprietary implementation details remain confidential."
     }
   },
   {
