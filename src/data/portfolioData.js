@@ -5,7 +5,7 @@ import aiSignLanguageImg from '../assets/AI Sign Language Translation System.png
 import ecommerceImg from '../assets/E-Commerce Website Showcase.png';
 
 // Certificate Asset Imports
-import fullStackCert from '../assets/1777473246591.jfif';
+import fullStackCert from '../assets/guvi-full-stack-certificate.jpg';
 import jsCert from '../assets/1778850476718.jfif';
 import mongoBasicsCert from '../assets/1784541436640.jfif';
 import mongoAiStrategyCert from '../assets/1784541436591.jfif';
