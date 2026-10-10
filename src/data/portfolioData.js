@@ -30,7 +30,7 @@ export const personalData = {
     email: "vsurya2107@gmail.com",
     github: "https://github.com/vsurya2107-arch",
     linkedin: "https://www.linkedin.com/in/v-surya-689436387",
-    location: "Chennai, India | Open to Remote Opportunities"
+    location: "Coimbatore, Tamil Nadu, India | Open to Remote Opportunities"
   },
   assets: {
     portrait: "/surya_portrait.png",
