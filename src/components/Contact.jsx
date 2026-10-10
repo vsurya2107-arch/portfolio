@@ -71,65 +71,46 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 bg-white text-zinc-950 relative overflow-hidden">
-      {/* Background Decor */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="contact" className="py-20 sm:py-28 bg-white text-zinc-950 border-t border-zinc-200/80 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="flex items-center space-x-3 mb-4"
-        >
-          <span className="w-8 h-[2px] bg-[#FF0033]" />
-          <span className="text-xs font-mono font-bold tracking-widest text-[#FF0033] uppercase">
-            09 // GET IN TOUCH
+        <div className="flex items-center space-x-2.5 mb-3">
+          <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+          <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
+            GET IN TOUCH
           </span>
-        </motion.div>
+        </div>
 
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5, delay: 0.1 }}
-          className="text-4xl sm:text-7xl font-black uppercase tracking-tight text-zinc-950 mb-12 leading-none"
-        >
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-zinc-950 mb-10 sm:mb-12">
           LET'S BUILD <span className="text-[#FF0033]">SOMETHING.</span>
-        </motion.h2>
+        </h2>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12">
           
-          {/* Left Column: Direct Contact Info Cards */}
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="lg:col-span-6 space-y-6"
-          >
-            <div className="space-y-3">
-              <p className="text-lg text-zinc-900 font-bold leading-relaxed">
-                Actively seeking Full-Stack Developer and AI-enabled Software Developer opportunities.
+          {/* Left Column: Contact Cards */}
+          <div className="lg:col-span-6 space-y-5">
+            <div className="space-y-2">
+              <p className="text-base sm:text-lg text-zinc-900 font-bold leading-relaxed">
+                Open for Full-Stack Developer and AI-enabled Software Developer roles.
               </p>
-              <p className="text-xs font-mono text-zinc-500 font-bold bg-zinc-100 px-3 py-1.5 rounded-lg border border-zinc-200 inline-block">
+              <p className="text-xs font-medium text-zinc-500 bg-zinc-50 px-3 py-1.5 rounded-lg border border-zinc-200/80 inline-block">
                 📍 {personalData.contact.location}
               </p>
             </div>
 
             {/* Email Card */}
-            <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-200 hover:border-[#FF0033] transition-colors flex items-center justify-between group shadow-2xs">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-[#FF0033]/10 text-[#FF0033] rounded-xl">
-                  <Mail className="w-6 h-6" />
+            <div className="p-5 bg-zinc-50 rounded-2xl border border-zinc-200/80 flex items-center justify-between">
+              <div className="flex items-center space-x-3.5">
+                <div className="p-2.5 bg-white text-zinc-900 rounded-xl border border-zinc-200/80">
+                  <Mail className="w-5 h-5 text-[#FF0033]" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono font-bold text-zinc-400 uppercase">EMAIL ADDRESS</p>
+                  <p className="text-[11px] font-semibold text-zinc-500 uppercase">Email Address</p>
                   <a
                     href={`mailto:${personalData.contact.email}`}
                     data-cursor="GO"
-                    className="text-base sm:text-lg font-bold text-zinc-950 hover:text-[#FF0033] transition-colors"
+                    className="text-sm sm:text-base font-bold text-zinc-950 hover:text-[#FF0033] transition-colors"
                   >
                     {personalData.contact.email}
                   </a>
@@ -138,13 +119,13 @@ export default function Contact() {
 
               <button
                 onClick={() => handleCopy(personalData.contact.email, 'email')}
-                className="p-2.5 bg-white hover:bg-zinc-100 rounded-xl border border-zinc-200 text-zinc-600 text-xs font-mono flex items-center space-x-1"
+                className="p-2 bg-white hover:bg-zinc-100 rounded-lg border border-zinc-200/80 text-zinc-600 text-xs font-medium flex items-center space-x-1 cursor-pointer"
                 title="Copy Email"
               >
                 {copiedField === 'email' ? (
                   <span className="text-emerald-600 font-bold flex items-center space-x-1">
                     <CheckCircle className="w-3.5 h-3.5" />
-                    <span>COPIED</span>
+                    <span>Copied</span>
                   </span>
                 ) : (
                   <Copy className="w-4 h-4" />
@@ -153,17 +134,17 @@ export default function Contact() {
             </div>
 
             {/* Phone Card */}
-            <div className="p-6 bg-zinc-50 rounded-2xl border border-zinc-200 hover:border-[#FF0033] transition-colors flex items-center justify-between group shadow-2xs">
-              <div className="flex items-center space-x-4">
-                <div className="p-3 bg-[#FF0033]/10 text-[#FF0033] rounded-xl">
-                  <Phone className="w-6 h-6" />
+            <div className="p-5 bg-zinc-50 rounded-2xl border border-zinc-200/80 flex items-center justify-between">
+              <div className="flex items-center space-x-3.5">
+                <div className="p-2.5 bg-white text-zinc-900 rounded-xl border border-zinc-200/80">
+                  <Phone className="w-5 h-5 text-[#FF0033]" />
                 </div>
                 <div>
-                  <p className="text-xs font-mono font-bold text-zinc-400 uppercase">PHONE NUMBER</p>
+                  <p className="text-[11px] font-semibold text-zinc-500 uppercase">Phone Number</p>
                   <a
                     href={`tel:${personalData.contact.phoneRaw}`}
                     data-cursor="GO"
-                    className="text-base sm:text-lg font-bold text-zinc-950 hover:text-[#FF0033] transition-colors"
+                    className="text-sm sm:text-base font-bold text-zinc-950 hover:text-[#FF0033] transition-colors"
                   >
                     {personalData.contact.phone}
                   </a>
@@ -172,13 +153,13 @@ export default function Contact() {
 
               <button
                 onClick={() => handleCopy(personalData.contact.phone, 'phone')}
-                className="p-2.5 bg-white hover:bg-zinc-100 rounded-xl border border-zinc-200 text-zinc-600 text-xs font-mono flex items-center space-x-1"
+                className="p-2 bg-white hover:bg-zinc-100 rounded-lg border border-zinc-200/80 text-zinc-600 text-xs font-medium flex items-center space-x-1 cursor-pointer"
                 title="Copy Phone"
               >
                 {copiedField === 'phone' ? (
                   <span className="text-emerald-600 font-bold flex items-center space-x-1">
                     <CheckCircle className="w-3.5 h-3.5" />
-                    <span>COPIED</span>
+                    <span>Copied</span>
                   </span>
                 ) : (
                   <Copy className="w-4 h-4" />
@@ -187,19 +168,19 @@ export default function Contact() {
             </div>
 
             {/* GitHub & LinkedIn Link Buttons */}
-            <div className="grid grid-cols-2 gap-4 pt-2">
+            <div className="grid grid-cols-2 gap-3 pt-1">
               <a
                 href={personalData.contact.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="GO"
-                className="p-4 bg-zinc-950 text-white hover:bg-[#FF0033] rounded-2xl font-mono text-xs font-bold transition-all flex items-center justify-between shadow-md group"
+                className="p-3.5 bg-zinc-950 text-white hover:bg-zinc-800 rounded-xl text-xs font-semibold transition-colors flex items-center justify-between"
               >
-                <div className="flex items-center space-x-2.5">
-                  <GithubIcon className="w-5 h-5" />
-                  <span>GITHUB</span>
+                <div className="flex items-center space-x-2">
+                  <GithubIcon className="w-4 h-4" />
+                  <span>GitHub</span>
                 </div>
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
               </a>
 
               <a
@@ -207,54 +188,44 @@ export default function Contact() {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-cursor="GO"
-                className="p-4 bg-zinc-950 text-white hover:bg-[#FF0033] rounded-2xl font-mono text-xs font-bold transition-all flex items-center justify-between shadow-md group"
+                className="p-3.5 bg-zinc-950 text-white hover:bg-zinc-800 rounded-xl text-xs font-semibold transition-colors flex items-center justify-between"
               >
-                <div className="flex items-center space-x-2.5">
-                  <LinkedinIcon className="w-5 h-5" />
-                  <span>LINKEDIN</span>
+                <div className="flex items-center space-x-2">
+                  <LinkedinIcon className="w-4 h-4" />
+                  <span>LinkedIn</span>
                 </div>
-                <ArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <ArrowUpRight className="w-3.5 h-3.5 text-zinc-400" />
               </a>
             </div>
 
-          </motion.div>
+          </div>
 
           {/* Right Column: Direct Message Form */}
-          <motion.div 
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="lg:col-span-6 bg-zinc-50 p-8 rounded-3xl border border-zinc-200 shadow-sm relative"
-          >
-            <h3 className="text-xl font-bold text-zinc-950 uppercase mb-6 flex items-center space-x-2">
-              <span>SEND A DIRECT MESSAGE</span>
-              <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+          <div className="lg:col-span-6 bg-zinc-50 p-6 sm:p-8 rounded-2xl border border-zinc-200/80">
+            <h3 className="text-lg font-extrabold text-zinc-950 uppercase mb-5">
+              Send a Direct Message
             </h3>
 
             {status === 'success' ? (
-              <div className="p-8 bg-emerald-50 border border-emerald-200 rounded-2xl text-center space-y-3">
-                <CheckCircle className="w-12 h-12 text-emerald-600 mx-auto" />
-                <h4 className="text-lg font-bold text-emerald-950">MESSAGE SENT SUCCESSFULLY.</h4>
-                <p className="text-xs text-emerald-800 font-mono">
-                  Your message has been submitted successfully.
+              <div className="p-6 bg-emerald-50 border border-emerald-200 rounded-xl text-center space-y-2">
+                <CheckCircle className="w-10 h-10 text-emerald-600 mx-auto" />
+                <h4 className="text-base font-bold text-emerald-950">Message Sent Successfully</h4>
+                <p className="text-xs text-emerald-800">
+                  Thank you for reaching out. Your message has been delivered.
                 </p>
-                <div className="inline-flex items-center space-x-1.5 text-xs font-mono font-bold text-emerald-700 bg-emerald-100/80 px-3 py-1 rounded-full">
-                  <span>MESSAGE SUBMITTED ✓</span>
-                </div>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-4" noValidate>
                 {errorMessage && (
-                  <div className="p-4 bg-red-50 border border-red-200 rounded-xl text-xs font-mono text-red-700 flex items-center space-x-2">
+                  <div className="p-3.5 bg-red-50 border border-red-200 rounded-xl text-xs text-red-700 font-medium flex items-center space-x-2">
                     <AlertCircle className="w-4 h-4 text-red-600 shrink-0" />
                     <span>{errorMessage}</span>
                   </div>
                 )}
 
                 <div>
-                  <label className="block text-xs font-mono font-bold text-zinc-500 uppercase mb-1">
-                    YOUR NAME
+                  <label className="block text-xs font-semibold text-zinc-700 uppercase mb-1.5">
+                    Your Name
                   </label>
                   <input
                     type="text"
@@ -263,13 +234,13 @@ export default function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Enter your full name"
-                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-xs font-sans text-zinc-900 focus:outline-none focus:border-[#FF0033] transition-colors disabled:opacity-60"
+                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-950 focus:ring-1 focus:ring-zinc-950 transition-colors disabled:opacity-60"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold text-zinc-500 uppercase mb-1">
-                    EMAIL ADDRESS
+                  <label className="block text-xs font-semibold text-zinc-700 uppercase mb-1.5">
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -278,13 +249,13 @@ export default function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="Enter your email address"
-                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-xs font-sans text-zinc-900 focus:outline-none focus:border-[#FF0033] transition-colors disabled:opacity-60"
+                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-950 focus:ring-1 focus:ring-zinc-950 transition-colors disabled:opacity-60"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-xs font-mono font-bold text-zinc-500 uppercase mb-1">
-                    MESSAGE / PROJECT DETAILS
+                  <label className="block text-xs font-semibold text-zinc-700 uppercase mb-1.5">
+                    Message / Project Details
                   </label>
                   <textarea
                     rows={4}
@@ -292,8 +263,8 @@ export default function Contact() {
                     disabled={status === 'submitting'}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    placeholder="Describe your internship offer, project, or inquiry..."
-                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-xs font-sans text-zinc-900 focus:outline-none focus:border-[#FF0033] transition-colors resize-none disabled:opacity-60"
+                    placeholder="Describe your inquiry, project, or opportunity..."
+                    className="w-full px-4 py-3 bg-white border border-zinc-200 rounded-xl text-sm text-zinc-900 placeholder:text-zinc-400 focus:outline-none focus:border-zinc-950 focus:ring-1 focus:ring-zinc-950 transition-colors resize-none disabled:opacity-60"
                   />
                 </div>
 
@@ -301,28 +272,28 @@ export default function Contact() {
                   type="submit"
                   data-cursor="OPEN"
                   disabled={status === 'submitting'}
-                  className="w-full inline-flex items-center justify-center space-x-2 bg-[#FF0033] hover:bg-[#E0002D] disabled:bg-zinc-400 text-white py-4 rounded-xl font-mono text-xs font-bold tracking-wider transition-all shadow-md shadow-[#FF0033]/20 disabled:shadow-none cursor-pointer disabled:cursor-not-allowed"
+                  className="w-full inline-flex items-center justify-center space-x-2 bg-[#FF0033] hover:bg-[#D9002B] disabled:bg-zinc-400 text-white py-3.5 rounded-xl font-semibold text-sm transition-colors shadow-sm cursor-pointer disabled:cursor-not-allowed"
                 >
                   {status === 'submitting' ? (
                     <>
                       <Loader2 className="w-4 h-4 animate-spin" />
-                      <span>SENDING MESSAGE...</span>
+                      <span>Sending Message...</span>
                     </>
                   ) : status === 'error' ? (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>TRY AGAIN</span>
+                      <span>Try Again</span>
                     </>
                   ) : (
                     <>
                       <Send className="w-4 h-4" />
-                      <span>TRANSMIT MESSAGE</span>
+                      <span>Send Message</span>
                     </>
                   )}
                 </button>
               </form>
             )}
-          </motion.div>
+          </div>
 
         </div>
       </div>

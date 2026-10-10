@@ -8,92 +8,88 @@ import { mainProjects } from '../data/portfolioData';
 
 export default function FeaturedProjects() {
   return (
-    <section id="work" className="py-24 bg-white text-zinc-950 relative overflow-hidden">
-      {/* Background Grid */}
-      <div className="absolute inset-0 bg-grid-pattern opacity-40 pointer-events-none" />
-
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <section id="work" className="py-20 sm:py-28 bg-white text-zinc-950 border-t border-zinc-200/80 relative">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="flex items-center space-x-3 mb-4">
-          <span className="w-8 h-[2px] bg-[#FF0033]" />
-          <span className="text-xs font-sans font-bold tracking-widest text-[#FF0033] uppercase">
-            03 // FEATURED PROJECTS & TECHNICAL PROOF
+        <div className="flex items-center space-x-2.5 mb-3">
+          <span className="w-2 h-2 rounded-full bg-[#FF0033]" />
+          <span className="text-xs font-semibold tracking-widest text-zinc-500 uppercase">
+            SELECTED PROJECTS
           </span>
         </div>
 
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
-          <div>
-            <h2 className="text-4xl sm:text-6xl font-black uppercase tracking-tight text-zinc-950 font-sans">
-              SELECTED <span className="text-[#FF0033]">WORK</span>
-            </h2>
-            <p className="text-zinc-600 font-sans text-sm sm:text-base leading-relaxed mt-2 max-w-2xl font-normal">
-              Authentic software projects showcasing full-stack development, database architecture, and practical AI integrations.
-            </p>
-          </div>
-          <span className="text-xs font-sans font-bold text-zinc-600 bg-zinc-100 px-3 py-1.5 rounded-full border border-zinc-200">
-            5 FEATURED APPLICATIONS
-          </span>
+        <div className="mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold uppercase tracking-tight text-zinc-950">
+            FEATURED <span className="text-[#FF0033]">WORK</span>
+          </h2>
+          <p className="text-zinc-600 text-sm sm:text-base leading-relaxed mt-2 max-w-2xl font-normal">
+            Selected full-stack software applications featuring React, Node.js, Express, MongoDB, and practical AI integrations.
+          </p>
         </div>
 
-        {/* Unified Project Stack */}
-        <div className="space-y-20 sm:space-y-24">
+        {/* Project List Stack */}
+        <div className="space-y-16 sm:space-y-20">
           {mainProjects.map((project, index) => {
             const isEven = index % 2 === 0;
+            const isFlagship = project.flagship || project.id === 'homiq';
 
             return (
               <motion.div
                 key={project.id}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.6 }}
-                className="pt-10 border-t border-zinc-200/80 first:border-0 first:pt-0"
+                viewport={{ once: true, margin: "-60px" }}
+                transition={{ duration: 0.5 }}
+                className={`pt-12 border-t border-zinc-200/80 first:border-0 first:pt-0 ${
+                  isFlagship ? 'bg-zinc-50/50 p-6 sm:p-8 rounded-3xl border border-zinc-200/80' : ''
+                }`}
               >
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
-                  {/* Left/Right Visual */}
+                  
+                  {/* Visual Screenshot Container */}
                   <div className={`lg:col-span-6 ${isEven ? 'lg:order-1' : 'lg:order-2'}`}>
                     <ProjectVisual project={project} />
                   </div>
 
-                  {/* Left/Right Unified Content */}
+                  {/* Project Details Content */}
                   <div className={`lg:col-span-6 space-y-5 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
                     
-                    {/* Number & Category Pill */}
+                    {/* Category & Flagship Tag */}
                     <div className="flex items-center justify-between">
-                      <span className="text-3xl sm:text-4xl font-black font-sans text-zinc-200 hover:text-[#FF0033] transition-colors">
-                        {project.number}
+                      <span className="text-xs font-bold text-[#FF0033] uppercase tracking-wider">
+                        {isFlagship ? '★ FLAGSHIP PROJECT' : project.category}
                       </span>
-                      <span className="text-xs font-sans font-semibold bg-zinc-100 text-zinc-700 px-3 py-1 rounded-full border border-zinc-200">
-                        {project.category}
+                      <span className="text-xs font-semibold text-zinc-400">
+                        {project.number}
                       </span>
                     </div>
 
                     {/* Title & Subtitle */}
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold font-sans text-zinc-950 tracking-tight uppercase leading-tight">
+                      <h3 className="text-2xl sm:text-3xl font-extrabold text-zinc-950 tracking-tight uppercase leading-tight">
                         {project.title}
                       </h3>
-                      <p className="text-sm sm:text-base font-sans font-semibold text-[#FF0033] mt-1">
+                      <p className="text-sm font-semibold text-zinc-600 mt-1">
                         {project.subtitle}
                       </p>
                     </div>
 
-                    {/* Short Description */}
-                    <p className="text-sm sm:text-[15px] font-sans text-zinc-700 leading-relaxed font-normal whitespace-pre-line max-w-xl">
+                    {/* Problem & Overview */}
+                    <p className="text-sm text-zinc-600 leading-relaxed font-normal whitespace-pre-line max-w-xl">
                       {project.description}
                     </p>
 
                     {/* Key Features */}
                     {project.keyFeatures && project.keyFeatures.length > 0 && (
-                      <div>
-                        <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
+                      <div className="space-y-2">
+                        <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider block">
                           KEY FEATURES
                         </span>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                           {project.keyFeatures.map((feat, idx) => (
-                            <div key={idx} className="flex items-start space-x-2 text-xs sm:text-sm font-sans font-medium text-zinc-800 leading-snug">
-                              <CheckCircle2 className="w-4 h-4 text-[#FF0033] shrink-0 mt-0.5" />
+                            <div key={idx} className="flex items-start space-x-2 text-xs font-medium text-zinc-800 leading-snug">
+                              <CheckCircle2 className="w-3.5 h-3.5 text-[#FF0033] shrink-0 mt-0.5" />
                               <span>{feat}</span>
                             </div>
                           ))}
@@ -101,32 +97,16 @@ export default function FeaturedProjects() {
                       </div>
                     )}
 
-                    {/* Engineering Highlights */}
-                    {project.engineeringHighlights && project.engineeringHighlights.length > 0 && (
-                      <div>
-                        <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
-                          ENGINEERING HIGHLIGHTS
-                        </span>
-                        <div className="flex flex-wrap gap-1.5 font-sans text-xs text-zinc-700 font-medium">
-                          {project.engineeringHighlights.map((hl, idx) => (
-                            <span key={idx} className="bg-zinc-50 border border-zinc-200 px-3 py-1 rounded-md text-zinc-700 font-semibold">
-                              {hl}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-                    )}
-
-                    {/* Technologies */}
-                    <div>
-                      <span className="text-xs font-sans font-bold text-zinc-500 uppercase tracking-wider block mb-2.5">
-                        TECHNOLOGIES
+                    {/* Tech Stack */}
+                    <div className="space-y-2">
+                      <span className="text-xs font-semibold text-zinc-500 uppercase tracking-wider block">
+                        TECHNOLOGY STACK
                       </span>
-                      <div className="flex flex-wrap gap-2">
+                      <div className="flex flex-wrap gap-1.5">
                         {project.technologies.map((tech, idx) => (
                           <span
                             key={idx}
-                            className="bg-zinc-100 text-zinc-900 px-3 py-1 rounded-full border border-zinc-200 text-xs font-sans font-semibold"
+                            className="bg-white text-zinc-800 px-3 py-1 rounded-lg border border-zinc-200/80 text-xs font-medium"
                           >
                             {tech}
                           </span>
@@ -134,7 +114,7 @@ export default function FeaturedProjects() {
                       </div>
                     </div>
 
-                    {/* Project Links (Shows working link if real URL exists; otherwise clean unavailable status) */}
+                    {/* Project Links */}
                     <div className="pt-2 flex flex-wrap items-center gap-3">
                       {project.github ? (
                         <a
@@ -142,16 +122,16 @@ export default function FeaturedProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="GO"
-                          className="inline-flex items-center space-x-2 bg-zinc-950 text-white hover:bg-[#FF0033] px-5 py-2.5 rounded-full text-xs font-sans font-bold transition-all shadow-md"
+                          className="inline-flex items-center space-x-2 bg-zinc-950 hover:bg-zinc-800 text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-colors"
                         >
-                          <GithubIcon className="w-4 h-4" />
-                          <span>GITHUB REPOSITORY</span>
+                          <GithubIcon className="w-3.5 h-3.5" />
+                          <span>GitHub Repository</span>
                           <ArrowUpRight className="w-3.5 h-3.5" />
                         </a>
                       ) : (
-                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200 px-4 py-2 rounded-full text-xs font-sans font-semibold">
+                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200/80 px-3.5 py-2 rounded-xl text-xs font-medium">
                           <GithubIcon className="w-3.5 h-3.5 text-zinc-400" />
-                          <span>GitHub unavailable</span>
+                          <span>GitHub Link Unavailable</span>
                         </span>
                       )}
 
@@ -161,15 +141,15 @@ export default function FeaturedProjects() {
                           target="_blank"
                           rel="noopener noreferrer"
                           data-cursor="OPEN"
-                          className="inline-flex items-center space-x-2 bg-[#FF0033] text-white hover:bg-[#E0002D] px-5 py-2.5 rounded-full text-xs font-sans font-bold transition-all shadow-md shadow-[#FF0033]/20"
+                          className="inline-flex items-center space-x-2 bg-[#FF0033] hover:bg-[#D9002B] text-white px-5 py-2.5 rounded-xl text-xs font-semibold transition-colors"
                         >
-                          <ExternalLink className="w-4 h-4" />
-                          <span>LIVE DEMO</span>
+                          <ExternalLink className="w-3.5 h-3.5" />
+                          <span>Live Demo</span>
                         </a>
                       ) : (
-                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200 px-4 py-2 rounded-full text-xs font-sans font-semibold">
+                        <span className="inline-flex items-center space-x-2 bg-zinc-100 text-zinc-400 border border-zinc-200/80 px-3.5 py-2 rounded-xl text-xs font-medium">
                           <ExternalLink className="w-3.5 h-3.5 text-zinc-400" />
-                          <span>Demo unavailable</span>
+                          <span>Demo Link Unavailable</span>
                         </span>
                       )}
                     </div>
@@ -177,7 +157,7 @@ export default function FeaturedProjects() {
                   </div>
                 </div>
 
-                {/* Reusable Case Study Drawer */}
+                {/* Case Study Accordion Drawer */}
                 {project.caseStudy && (
                   <ProjectCaseStudy project={project} />
                 )}

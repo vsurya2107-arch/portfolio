@@ -11,6 +11,7 @@ import CertificationsAndActivities from './components/CertificationsAndActivitie
 import Services from './components/Services';
 import ResumeSection from './components/ResumeSection';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
@@ -62,13 +63,13 @@ export default function App() {
         {/* 05. SECONDARY PROJECTS ARCHIVE */}
         <OtherProjects />
 
-        {/* 06. LEADERSHIP & MENTORING EXPERIENCE (21 STUDENTS) */}
+        {/* 06. LEADERSHIP & MENTORING EXPERIENCE */}
         <Mentoring />
 
         {/* 07. CERTIFICATIONS & TECHNICAL ACTIVITIES */}
         <CertificationsAndActivities />
 
-        {/* 08. WHAT I CAN BUILD / FREELANCE SERVICES */}
+        {/* 08. TECHNICAL CAPABILITIES / SERVICES */}
         <Services />
 
         {/* 09. RESUME SECTION */}
@@ -76,6 +77,9 @@ export default function App() {
 
         {/* 10. CONTACT SECTION */}
         <Contact />
+
+        {/* 11. FOOTER */}
+        <Footer />
       </main>
     </div>
   );
